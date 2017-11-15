@@ -1,0 +1,22 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dom.js",
+  "scripts": {
+  "test": "tape ./tests/*.test.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facg3/To-do-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facg3/To-do-App/issues"
+  },
+  "homepage": "https://github.com/facg3/To-do-App#readme",
+  "devDependencies": {
+    "tape": "^4.8.0"
+  }
+}
