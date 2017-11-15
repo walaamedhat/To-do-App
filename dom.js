@@ -18,16 +18,34 @@
     // you will need to use addEventListener
 
     // add span holding description
+    var x = document.createElement("SPAN");
+   var text = document.createTextNode(todo.description);
+   x.appendChild(text);
+   todoNode.appendChild(x);
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
+
+    deleteButtonNode.className = "delete";
+    var t = document.createTextNode("Delete");       // Create a text node
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
+    deleteButtonNode.appendChild(t);
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
+    var markButtonNode = document.createElement('button');
+
+    markButtonNode.className = "mark";
+    var te = document.createTextNode("Mark");       // Create a text node
+    markButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.markTodo(state, todo.id);
+      update(newState);
+    });
+    markButtonNode.appendChild(te);
+    todoNode.appendChild(markButtonNode);
 
     // add classes for css
 
