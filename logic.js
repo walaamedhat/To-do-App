@@ -28,17 +28,53 @@ var todoFunctions = {
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
+
+    var todo = todoFunctions.cloneArrayOfObjects(todos);
+    var newTodo = {id:todoFunctions.generateId(), description: newTodo,done: false };
+    todo.push(newTodo);
+    return todo;
+
   },
+
+
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    var todoo = todoFunctions.cloneArrayOfObjects(todos);
+      todoo=todoo.filter(function(todo){
+          return todo.id !=idToDelete;
+});
+
+    return todoo;
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
+    var to_do = todoFunctions.cloneArrayOfObjects(todos);var n;
+    to_do = to_do.map(function(x) {
+      if (x.id ==idToMark) {
+          if (x.done) {
+            x["done"]=false;
+          }
+          else {
+            x["done"]=true;
+          }
+
+
+      }
+
+      n=to_do;
+
+      console.log(x);
+      return n;
+    });
+
+      return n;
+
+
   },
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
