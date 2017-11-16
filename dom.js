@@ -48,9 +48,11 @@
     markButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
 
+
         // x.classList.add('completed');
         // console.log(x.classList);
       update(newState);
+      
 
     });
     markButtonNode.appendChild(te);
@@ -73,9 +75,12 @@
       event.preventDefault();
       var description = event.target.description.value; // event.target ....
 
+      if((description==="")||(description===" ")){alert("you write nothing")}
+
       // hint: todoFunctions.addTodo
+      else {
       var newState = todoFunctions.addTodo(state, description); // ?? change this!
-      update(newState);
+      update(newState);}
     });
   }
 
