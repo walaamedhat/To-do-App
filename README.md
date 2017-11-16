@@ -7,7 +7,18 @@ We built our to-do app using TDD. Our app helps people enter tasks they need to 
 This app helps people to organize their chores in the day-to-day life.
 
 ## How  
-We divided the functions on the three of us so that each two do pair programming while the third searches/prepares the upcoming part. And then we swap pairs till we get everything done.
+We divided the functions on the three of us so that each two do pair programming while the third searches/prepares the upcoming part. And then we swap pairs till we get everything done.  
 
-[Github pages]( https://facg3.github.io/To-do-App/
+## How did we find the project?
+- It was a great experience. We enjoyed teamwork and swapping.
+
+
+## What did we learn?
+- We learned how to divide the tasks evenly.
+- We learned how to arrange our project into files.
+- We learned how make TDD tests, pure functions and DOM    manipulation.
+
+
+
+You can view our app using  [Github pages]( https://facg3.github.io/To-do-App/
 )
