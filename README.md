@@ -8,3 +8,6 @@ This app helps people to organize their chores in the day-to-day life.
 
 ## How  
 We divided the functions on the three of us so that each two do pair programming while the third searches/prepares the upcoming part. And then we swap pairs till we get everything done.
+
+[Github pages]( https://facg3.github.io/To-do-App/
+)
