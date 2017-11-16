@@ -17,6 +17,7 @@
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
 
+
     // add span holding description
     var x = document.createElement("SPAN");
    var text = document.createTextNode(todo.description);
@@ -37,8 +38,6 @@
 
     // add markTodo button
     var markButtonNode = document.createElement('button');
-
-    markButtonNode.className = "mark";
     var te = document.createTextNode("Mark");       // Create a text node
     markButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
@@ -48,6 +47,7 @@
     todoNode.appendChild(markButtonNode);
 
     // add classes for css
+    markButtonNode.className = "mark";
 
     return todoNode;
   };
