@@ -4,6 +4,18 @@ body {
   line-height: 1.4em;
   background-color: white;
 }
+/*responsive*/
+@media (max-width: 650px) {
+.form label {
+  	margin:10px 0;
+  }
+  .form input {
+    	margin:10px 0;
+    }
+    .todo-container {
+      	margin:10px 0;
+      }
+}
 
 h3{
   font-weight: 700;
@@ -12,9 +24,11 @@ h3{
   padding: 30px 0 10px;
   margin: 0;
   text-transform: uppercase;
+  max-width: 400px;
+
 }
 
-li{margin: 20px;}
+li{margin-bottom: 20px;}
 
 .section {
   display: flex;
@@ -62,7 +76,7 @@ li{margin: 20px;}
 .complete{
   color: green;
 }
-
+/*task completed */
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
@@ -104,8 +118,11 @@ li{margin: 20px;}
 .todo-container{
   padding: 0;
   margin-top: 64px;
-  margin-left: 400px;
-  margin-right: 300px;
   font-weight: bold;
   color: #1d5970;
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  flex-direction: row;
+  flex-wrap: wrap;
 }

@@ -2,29 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="To do list">
+    <meta name="keywords" content="HTML,CSS">
+    <meta name="author" content="Yasmin Hillis">
     <title>tdd todo</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body><center>
-    <div class="section">
+    <div class="form" >
     <img src="taskdeck_icon.png" alt="todo icon"/><br><br><br>
     <form id="add-todo">
-      <label for="new-task-input">Write task </label>
+      <label for="new-task-input">Write task : </label>
       <input id="new-task-input" type="text" name="description" value="" class="new-task-input" placeholder="What do you want to do">
       <input type="submit" name="" value="Add task" class="add-task-button">
 
-    </form></center>
+    </form>
     <h3 class="todo todo-container">Todo</h3>
     <div id = "todo-container" class="todo-container">
 
       <ul id="incomplete-tasks">
         </ul>
 
-        <h3 class="complete">Completed</h3>
-      <ul id="completed-tasks">
-      </ul>
-    </div>
-  </div>
+
+    </div></div></center>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
