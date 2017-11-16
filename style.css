@@ -16,10 +16,19 @@ h3{
 
 li{margin: 20px;}
 
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
 /*mark button*/
 .mark{
   background-color: #4CAF50;;
-  color: white;
+  color: black;
   cursor: pointer;
   font-size: 16px;
   line-height: 1.4em;
@@ -32,8 +41,8 @@ li{margin: 20px;}
 
 /*delete button*/
 .delete {
-  background-color: #a82a14;
-  color: white;
+  background-color: red;
+  color: black;
   cursor: pointer;
   font-size: 16px;
   line-height: 1.4em;
@@ -54,6 +63,11 @@ li{margin: 20px;}
   color: green;
 }
 
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
 /*field to add task*/
 .new-task-input {
   color: black;
@@ -62,13 +76,13 @@ li{margin: 20px;}
   font-size: 16px;
   line-height: 1.4em;
   border: none;
-  border-bottom: 1px solid #59a5c1;
+  border-bottom: 2px solid #59a5c1;
   margin: 0px 20px;
 
 }
 .new-task-input:focus {
     outline: none;
-    border-bottom-color: white;
+    border-bottom-color: green;
   }
 
 /*add task button*/
@@ -79,7 +93,7 @@ li{margin: 20px;}
   border: none;
   border-radius: 3px;
 
-  color: white;
+  color: Black;
   background: #0D99FC;
 }
 .add-task-button:hover{

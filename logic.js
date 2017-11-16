@@ -56,9 +56,18 @@ var todoFunctions = {
     var to_do = todoFunctions.cloneArrayOfObjects(todos);var n;
     to_do = to_do.map(function(x) {
       if (x.id ==idToMark) {
-        x["done"]=true;
+          if (x.done) {
+            x["done"]=false;
+          }
+          else {
+            x["done"]=true;
+          }
+
+
       }
+
       n=to_do;
+
       console.log(x);
       return n;
     });

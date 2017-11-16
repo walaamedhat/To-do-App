@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>tdd todo</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body><center>
-    <img src="taskdeck_icon.png"/><br><br><br>
+    <div class="section">
+    <img src="taskdeck_icon.png" alt="todo icon"/><br><br><br>
     <form id="add-todo">
+      <label for="new-task-input">Write task </label>
       <input id="new-task-input" type="text" name="description" value="" class="new-task-input" placeholder="What do you want to do">
       <input type="submit" name="" value="Add task" class="add-task-button">
 
@@ -22,6 +24,7 @@
       <ul id="completed-tasks">
       </ul>
     </div>
+  </div>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
