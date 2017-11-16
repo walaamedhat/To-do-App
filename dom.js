@@ -48,9 +48,11 @@
     markButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
 
+
         // x.classList.add('completed');
         // console.log(x.classList);
       update(newState);
+      
 
     });
     markButtonNode.appendChild(te);

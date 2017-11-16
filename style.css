@@ -4,7 +4,6 @@ body {
   line-height: 1.4em;
   background-color: white;
 }
-/*responsive*/
 @media (max-width: 650px) {
 .form label {
   	margin:10px 0;
@@ -16,7 +15,6 @@ body {
       	margin:10px 0;
       }
 }
-
 h3{
   font-weight: 700;
   font-size: 15px;
