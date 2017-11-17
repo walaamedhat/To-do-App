@@ -89,7 +89,9 @@ var state2=[];
    markButtonNode.addEventListener('click', function(event) {
      var newState= todoFunctions.markTodo(state2, todo.id);
      for (i in newState) {
-           state.push(newState[i]);
+       if (newState[i].id==todo.id) {
+         state.push(newState[i]);
+       }
      }
     newState = todoFunctions.deleteTodo(state2, todo.id);
     // console.log(state2);
