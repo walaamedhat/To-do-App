@@ -57,23 +57,20 @@ var todoFunctions = {
     to_do = to_do.map(function(x) {
       if (x.id ==idToMark) {
         x.done =!x.done;
-
-        
-
-
       }
-
       n=to_do;
-
       console.log(x);
       return n;
     });
-
       return n;
-
-
   },
-  sortTodos: function(todos, sortFunction) {
+  sortTodos: function(todos, id) {
+    var todoo = todoFunctions.cloneArrayOfObjects(todos);
+      todoo=todoo.filter(function(todo){
+          return todo.id ==id;
+});
+
+    return todoo;
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort

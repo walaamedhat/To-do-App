@@ -18,7 +18,7 @@ body {
 h3{
   font-weight: 700;
   font-size: 15px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #1d79db;
   padding: 30px 0 10px;
   margin: 0;
   text-transform: uppercase;
@@ -27,6 +27,8 @@ h3{
 }
 
 li{margin-bottom: 20px;}
+
+label{color: black;font-weight: bold;}
 
 .section {
   display: flex;
@@ -39,40 +41,45 @@ li{margin-bottom: 20px;}
 
 /*mark button*/
 .mark{
-  background-color: #4CAF50;;
-  color: black;
+  background-color: #137f2c;
+  color: white;
   cursor: pointer;
   font-size: 16px;
   line-height: 1.4em;
   border: none;
-  border-radius: 3px;
-  margin-left: 5px;
+  border-radius: 6px;
+  margin-left: 50px;
+  font-weight: bold;
+
 }
 .mark:hover {background: #46a049;cursor: pointer;}
 
 
 /*delete button*/
 .delete {
-  background-color: red;
-  color: black;
+  background-color: #af3611;
+  color: white;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
   line-height: 1.4em;
   border: none;
-  border-radius: 3px;
-  margin-left: 50px;
+  border-radius: 6px;
+  margin-left: 5px;
   }
 .delete:hover {background: #da190b;cursor: pointer;}
 
 
 /*todo div*/
-.todo{
+.uncomplete{
   color: black;
 }
 
 /*complete div*/
 .complete{
   color: green;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
 }
 /*task completed */
 .completed {
@@ -103,10 +110,12 @@ li{margin-bottom: 20px;}
   line-height: 1.4em;
 
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
 
-  color: Black;
-  background: #0D99FC;
+  color: white;
+  font-weight: bold;
+  background:#167e9e;
+  /*#0D99FC;*/
 }
 .add-task-button:hover{
   cursor: pointer;
@@ -117,7 +126,19 @@ li{margin-bottom: 20px;}
   padding: 0;
   margin-top: 64px;
   font-weight: bold;
-  color: #1d5970;
+  color: black;
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/*done*/
+.do-container{
+  padding: 0;
+  margin-top: 64px;
+  font-weight: bold;
+  color: green;
   display: flex;
   justify-content: center;
   /*align-items: center;*/
