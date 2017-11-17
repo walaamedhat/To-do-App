@@ -30,4 +30,12 @@ test('markTodo output', function(t) {
   var expected=[{id:1,description:'assignment maya',done: true}];
   t.deepEqual(actual, expected);
   t.end();
+});
+
+test('sortTodo output', function(t) {
+  var todos = [{id:1,description:'assignment maya',done: false},{id:2,description:'assignment maya',done: false}];
+  var  actual =   logic.sortTodos(todos,1);
+  var expected=[{id:1,description:'assignment maya',done: false}];
+  t.deepEqual(actual, expected);
+  t.end();
 })

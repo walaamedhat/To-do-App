@@ -4,6 +4,7 @@
 (function() {
   // This is the dom node where we will keep our todo
   var container = document.getElementById('todo-container');
+  var cont = document.getElementById('do-container');
   var addTodoForm = document.getElementById('add-todo');
 
   var state = [
@@ -11,25 +12,37 @@
     { id: -2, description: 'second todo' },
     { id: -1, description: 'third todo' },
   ]; // this is our initial todoList
-
+var newState2=[];var state2;
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
-
     // you will need to use addEventListener
-
-
     // add span holding description
     var x = document.createElement("SPAN");
     if (todo.done) {
       x.classList.add('completed') ;
       }
-
-
    var text = document.createTextNode(todo.description);
    x.appendChild(text);
    todoNode.appendChild(x);
+   // add markTodo button
+   var markButtonNode = document.createElement('button');
+   var te = document.createTextNode("Mark");       // Create a text node
+   markButtonNode.addEventListener('click', function(event) {
+     var newState= todoFunctions.markTodo(state, todo.id);
+     var m=todoFunctions.sortTodos(newState, todo.id);
+     for (var i in m) {
+       newState2.push(m[i]);
+     }
+     console.log(newState2);
+     newState = todoFunctions.deleteTodo(state, todo.id);
+     update(newState);
+     update2(newState2);
 
+
+   });
+   markButtonNode.appendChild(te);
+   todoNode.appendChild(markButtonNode);
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
 
@@ -41,22 +54,6 @@
     });
     deleteButtonNode.appendChild(t);
     todoNode.appendChild(deleteButtonNode);
-
-    // add markTodo button
-    var markButtonNode = document.createElement('button');
-    var te = document.createTextNode("Mark");       // Create a text node
-    markButtonNode.addEventListener('click', function(event) {
-      var newState = todoFunctions.markTodo(state, todo.id);
-
-
-        // x.classList.add('completed');
-        // console.log(x.classList);
-      update(newState);
-      
-
-    });
-    markButtonNode.appendChild(te);
-    todoNode.appendChild(markButtonNode);
 
     // add classes for css
     markButtonNode.className = "mark";
@@ -73,14 +70,16 @@
       // what does event.preventDefault do?
       // what is inside event.target?
       event.preventDefault();
-      var description = event.target.description.value; // event.target ....
+      var description = event.target.description.value;
+      event.target.description.value=""; // event.target ....
 
-      if((description==="")||(description===" ")){alert("you write nothing")}
-
+      if(description.trim()!==""){
+        var newState = todoFunctions.addTodo(state, description); // ?? change this!
+        update(newState);
+      }
+      else alert("You are not doing anything?");
       // hint: todoFunctions.addTodo
-      else {
-      var newState = todoFunctions.addTodo(state, description); // ?? change this!
-      update(newState);}
+
     });
   }
 
@@ -102,5 +101,23 @@
     container.replaceChild(todoListNode, container.firstChild);
   };
 
+  /*to show done task*/
+  var update2 = function(newState2) {
+    state2= newState2;
+    renderState2(state2);
+  };
+
+  var renderState2 = function(state2) {
+    var todoListNode = document.createElement('ul');
+
+    state2.forEach(function(todo) {
+      todoListNode.appendChild(createTodoNode(todo));
+    });
+
+    // you may want to add a class for css
+    cont.replaceChild(todoListNode, cont.firstChild);
+  };
+
   if (container) renderState(state);
+    if (cont) renderState2(state2);
 })();
