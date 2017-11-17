@@ -21,6 +21,7 @@ var newState2=[];var state2;
     var x = document.createElement("SPAN");
     if (todo.done) {
       x.classList.add('completed') ;
+
       }
    var text = document.createTextNode(todo.description);
    x.appendChild(text);
@@ -119,5 +120,5 @@ var newState2=[];var state2;
   };
 
   if (container) renderState(state);
-    
+
 })();
