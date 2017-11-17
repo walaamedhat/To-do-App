@@ -119,5 +119,5 @@ var newState2=[];var state2;
   };
 
   if (container) renderState(state);
-    if (cont) renderState2(state2);
+    
 })();
