@@ -86,7 +86,7 @@ var state2=[];
    todoNode.appendChild(x);
    // add markTodo button
    var markButtonNode = document.createElement('button');
-   var te = document.createTextNode("Mark");       // Create a text node
+   var te = document.createTextNode("UnMark");       // Create a text node
    markButtonNode.addEventListener('click', function(event) {
      var newState= todoFunctions.markTodo(state2, todo.id);
      for (i in newState) {

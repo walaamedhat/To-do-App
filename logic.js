@@ -53,16 +53,14 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-    var to_do = todoFunctions.cloneArrayOfObjects(todos);var n;
+    var to_do = todoFunctions.cloneArrayOfObjects(todos);
     to_do = to_do.map(function(x) {
       if (x.id ==idToMark) {
         x.done =!x.done;
       }
-      n=to_do;
-      console.log(x);
-      return n;
+      return x;
     });
-      return n;
+      return to_do;
   },
   sortTodos: function(todos, id) {
     var todoo = todoFunctions.cloneArrayOfObjects(todos);

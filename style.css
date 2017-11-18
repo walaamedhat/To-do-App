@@ -26,7 +26,8 @@ h3{
 
 }
 
-li{margin-bottom: 20px;}
+li{margin-bottom: 20px;
+}
 
 label{color: black;font-weight: bold;}
 
@@ -37,7 +38,6 @@ label{color: black;font-weight: bold;}
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 
 /*mark button*/
 .mark{
